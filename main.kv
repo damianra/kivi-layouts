@@ -1,0 +1,93 @@
+# Convert HEX color to RGB decimal
+# https://corecoding.com/utilities/rgb-or-hex-to-float.php
+#
+# Principal Widget
+<Container>
+    padding: 5
+    orientation: 'vertical'
+    canvas:
+        Color:
+            rgb: 0.82, 0.886, 0.996
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        size_hint: 1, .40
+        opacity: 0
+        id: flLayout
+        Image:
+            pos_hint: {'x': .0, 'y': .0}
+            source: 'eLearning.png'
+    RelativeLayout:
+        Button:
+            text: "Press Button"
+            pos_hint: {'x': .35, 'y': .5}
+            size_hint: .3, .3
+            font_size: 20
+            on_press: root.opacity_btn()
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 2
+            id: boxLayIzq
+            opacity: 0
+            canvas:
+                Color:
+                    rgb:  0,0,0
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            pos_hint: {'x': .0, 'y': .0}
+            size_hint: .3, 1
+            Label:
+                text: 'Label Boxlayout'
+                size_hint: 1, .1
+            TextInput:
+                hint_text: 'Text input in boxlayout'
+                multiline: True
+        BoxLayout:
+            orientation: 'horizontal'
+            id: boxhorizontal
+            opacity: 0
+            pos_hint: {'x': .7, 'y': .7}
+            size_hint: .3, .3
+            padding: 1.5
+            canvas:
+                Color:
+                    rgb:  0.145, 0.608, 0.176
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            Label:
+                text: "lbl1"
+            Label:
+                text: "lbl2"
+            BoxLayout:
+                orientation: 'vertical'
+                canvas:
+                    Color:
+                        rgb:  0.008, 0.184, 0.976
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                Label:
+                    text: "lbl3"
+                Label:
+                    text: "lbl4"
+
+
+        AnchorLayout:
+            opacity: 0
+            id: anchorLayout
+            size_hint: .3, 0.50
+            pos_hint: {'x': .70, 'y': .0}
+            anchor_x: 'right'
+            anchor_y: 'bottom'
+            canvas:
+                Color:
+                    rgb:  .5, .5, 5, 1
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            Image:
+                source: 'eLearning.png'
+                size_hint: .45, .20
